@@ -5,7 +5,7 @@ Site estático (HTML + CSS), sem build e sem dependências.
 ## Estrutura
 - `index.html` Início · `artigos.html` · `series.html` · `sobre.html`
 - `artigo-*.html` um arquivo por artigo (publicados e "em breve")
-- `` estilo, fotos e imagem de compartilhamento
+- `assets/` estilo, fotos e imagem de compartilhamento
 - `CNAME` já com o domínio `gibagg.com.br` · `sitemap.xml` · `robots.txt`
 
 ## Publicar de graça no GitHub Pages
