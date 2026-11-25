@@ -2,7 +2,7 @@
    Enquanto um campo estiver vazio, o bloco correspondente não aparece no site. */
 (function () {
   var CONFIG = {
-    giscus: { repo: "gibabb/Gibagg.github.io", repoId: "", category: "Comentários", categoryId: "" },
+    giscus: { repo: "gibabb/gibagg.github.io", repoId: "R_kgDOV1s3YA", category: "Announcements", categoryId: "DIC_kwDOV1s3YM4DL5mX" },
     firebase: { projectId: "", apiKey: "" }
   };
   var box = document.getElementById("interacao");
