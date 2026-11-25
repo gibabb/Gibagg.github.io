@@ -26,13 +26,4 @@
 </div></footer><script>(function(){if(window.__zoomFig)return;window.__zoomFig=1;var last=null;
 function close(){var o=document.querySelector('.zoom-ov');if(o){o.remove();document.documentElement.style.overflow='';if(last&&last.focus)last.focus();}}
 function open(f){var s=f.querySelector('svg');if(!s)return;last=document.activeElement;
-var cap=f.querySelector('figcaption');var o=document.createElement('div');o.className='zoom-ov';o.setAttribute('role','dialog');o.setAttribute('aria-modal','true');o.setAttribute('aria-label','Ilustração ampliada');
-var b=document.createElement('button');b.type='button';b.className='zoom-close';b.setAttribute('aria-label','Fechar');b.innerHTML='&times;';
-var w=document.createElement('div');w.className='zoom-box';var c=s.cloneNode(true);c.removeAttribute('width');c.removeAttribute('height');w.appendChild(c);
-if(cap){var p=document.createElement('p');p.textContent=cap.textContent;w.appendChild(p);}
-o.appendChild(b);o.appendChild(w);document.body.appendChild(o);document.documentElement.style.overflow='hidden';b.focus();
-o.addEventListener('click',function(e){if(e.target===o||e.target===b||e.target===w)close();});}
-document.addEventListener('click',function(e){var f=e.target.closest&&e.target.closest('figure.fig');if(f&&!e.target.closest('.zoom-ov'))open(f);});
-document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
-})();
-</script></body></html>
+var cap=f.querySelector('figcaption');var o=document.createElement('div');o.className='zoom-ov';
