@@ -4,7 +4,7 @@
 <meta name="theme-color" content="#0f2747"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f2747'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23d4a63a'%3EG%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&display=swap"><link rel="stylesheet" href="style.css">
 <style>
-.av-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:8px 0 26px}
+.av-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:14px;margin:8px 0 26px}
 .av-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
 .av-card b{display:block;font-size:30px;line-height:1.1;color:var(--ink)}
 .av-card span{font-size:13px;color:var(--muted)}
@@ -28,12 +28,12 @@
 <header class="site-header"><div class="wrap">
 <a class="brand" href="index.html" aria-label="Gilberto Gomes, página inicial"><img src="gilberto-avatar.jpg" alt="" width="38" height="38"><span><b>GILBERTO GOMES</b><small>Dados, produtos e IA, com clareza.</small></span></a>
 <nav class="nav" aria-label="Principal"><a href="index.html">Início</a><a href="artigos.html">Artigos</a><a href="series.html">Séries</a><a href="midia.html">Na mídia</a><a href="sobre.html">Sobre</a><a class="cta" href="https://www.linkedin.com/in/gilbertoangomes" target="_blank" rel="noopener">LinkedIn ↗</a></nav>
-</div></header><main id="conteudo"><div class="page-head"><div class="wrap"><h1>Avaliações dos artigos</h1><p>Painel único com a média de estrelas e o número de avaliações de cada artigo.</p></div></div>
+</div></header><main id="conteudo"><div class="page-head"><div class="wrap"><h1>Avaliações dos artigos</h1><p>Painel único com a média de estrelas, o número de avaliações e os acessos de cada artigo.</p></div></div>
 <section style="padding:10px 0 60px"><div class="wrap">
-<div class="av-cards"><div class="av-card"><b id="k-tot">–</b><span>Total de artigos</span></div><div class="av-card"><b id="k-art">–</b><span>Artigos avaliados</span></div><div class="av-card"><b id="k-sem">–</b><span>Artigos sem avaliação</span></div><div class="av-card"><b id="k-total">–</b><span>Avaliações no total</span></div><div class="av-card"><b id="k-media">–</b><span>Média ponderada (pelo nº de avaliações)</span></div></div>
-<div class="av-tools" role="group" aria-label="Ordenar"><button type="button" data-o="media" aria-pressed="true">Maior média</button><button type="button" data-o="qtd" aria-pressed="false">Mais avaliações</button><button type="button" data-o="menor" aria-pressed="false">Menor média</button><button type="button" data-o="nome" aria-pressed="false">A–Z</button><button type="button" id="atualizar">Atualizar</button><span class="st" id="st" role="status">Carregando…</span></div>
-<div class="av-wrap"><table class="av-t"><thead><tr><th>Artigo</th><th class="n">Média</th><th class="n">Avaliações</th></tr></thead><tbody id="corpo"></tbody></table></div>
-<p class="av-note">A média ponderada soma todas as notas e divide pelo total de avaliações, então os artigos mais avaliados pesam mais. Cada pessoa vota uma vez por artigo, a partir do mesmo navegador. O painel mostra a média e a contagem, porque o sistema guarda a soma das notas e o número de avaliações, e não a distribuição por estrela.</p>
+<div class="av-cards"><div class="av-card"><b id="k-tot">–</b><span>Total de artigos</span></div><div class="av-card"><b id="k-art">–</b><span>Artigos avaliados</span></div><div class="av-card"><b id="k-sem">–</b><span>Artigos sem avaliação</span></div><div class="av-card"><b id="k-total">–</b><span>Avaliações no total</span></div><div class="av-card"><b id="k-acessos">–</b><span>Acessos no total</span></div><div class="av-card"><b id="k-media">–</b><span>Média ponderada (pelo nº de avaliações)</span></div></div>
+<div class="av-tools" role="group" aria-label="Ordenar"><button type="button" data-o="media" aria-pressed="true">Maior média</button><button type="button" data-o="qtd" aria-pressed="false">Mais avaliações</button><button type="button" data-o="acessos" aria-pressed="false">Mais acessos</button><button type="button" data-o="menor" aria-pressed="false">Menor média</button><button type="button" data-o="nome" aria-pressed="false">A–Z</button><button type="button" id="atualizar">Atualizar</button><span class="st" id="st" role="status">Carregando…</span></div>
+<div class="av-wrap"><table class="av-t"><thead><tr><th>Artigo</th><th class="n">Média</th><th class="n">Avaliações</th><th class="n">Acessos</th></tr></thead><tbody id="corpo"></tbody></table></div>
+<p class="av-note">A média ponderada soma todas as notas e divide pelo total de avaliações, então os artigos mais avaliados pesam mais. Cada pessoa vota uma vez por artigo, a partir do mesmo navegador. Os acessos contam uma vez por artigo a cada visita de um navegador, desde que o contador foi publicado, e este navegador, ao abrir o painel, deixa de ser contado, para que as suas visitas não inflem os números. O painel mostra a média e a contagem, porque o sistema guarda a soma das notas e o número de avaliações, e não a distribuição por estrela.</p>
 </div></section></main>
 <footer><div class="wrap"><div class="legal">© 2026 Gilberto Gomes · <a href="index.html">gibagg.com.br</a></div></div></footer>
 <script>
@@ -42,27 +42,33 @@ var ARTS=[["agentes-e-menor-privilegio", "Agentes e menor privilégio: dar à IA
 var P="gibagg-d8ab9",K="AIzaSyDz6T4Ysmj_ao1vxhuxmrBsXi-gBgIWklQ";
 var base="https://firestore.googleapis.com/v1/projects/"+P+"/databases/(default)/documents/ratings";
 var titulo={};ARTS.forEach(function(a){titulo[a[0]]=a[1];});
-var rows=[],ord="media",corpo=document.getElementById("corpo"),st=document.getElementById("st");
+var vmap={},rows=[],ord="media",corpo=document.getElementById("corpo"),st=document.getElementById("st");
 function pick(d){if(!d||!d.fields||!d.fields.count)return null;return{s:+(d.fields.sum&&d.fields.sum.integerValue||0),c:+d.fields.count.integerValue};}
 function slugOf(d){return d.name.split("/").pop();}
 function fmt(n){return n.toFixed(1).replace(".",",");}
 function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
-function monta(map){rows=ARTS.map(function(a){var r=map[a[0]];return{slug:a[0],t:a[1],c:r?r.c:0,m:r&&r.c?r.s/r.c:0};});
-Object.keys(map).forEach(function(s){if(!titulo[s])rows.push({slug:s,t:s,c:map[s].c,m:map[s].c?map[s].s/map[s].c:0});});}
+function monta(map){rows=ARTS.map(function(a){var r=map[a[0]];return{slug:a[0],t:a[1],c:r?r.c:0,m:r&&r.c?r.s/r.c:0,v:vmap[a[0]]||0};});
+Object.keys(map).forEach(function(s){if(!titulo[s])rows.push({slug:s,t:s,c:map[s].c,m:map[s].c?map[s].s/map[s].c:0,v:vmap[s]||0});});}
 function desenha(){var av=rows.filter(function(r){return r.c>0;}),tot=av.reduce(function(a,r){return a+r.c;},0),soma=av.reduce(function(a,r){return a+r.m*r.c;},0);
-document.getElementById("k-media").textContent=tot?fmt(soma/tot):"–";document.getElementById("k-tot").textContent=rows.length;document.getElementById("k-total").textContent=tot;document.getElementById("k-art").textContent=av.length;document.getElementById("k-sem").textContent=rows.length-av.length;
+document.getElementById("k-media").textContent=tot?fmt(soma/tot):"–";document.getElementById("k-tot").textContent=rows.length;document.getElementById("k-acessos").textContent=rows.reduce(function(a,r){return a+r.v;},0).toLocaleString("pt-BR");document.getElementById("k-total").textContent=tot;document.getElementById("k-art").textContent=av.length;document.getElementById("k-sem").textContent=rows.length-av.length;
 var l=rows.slice();
 if(ord==="media")l.sort(function(a,b){return (b.c>0)-(a.c>0)||b.m-a.m||b.c-a.c;});
 if(ord==="qtd")l.sort(function(a,b){return b.c-a.c||b.m-a.m;});
 if(ord==="menor")l.sort(function(a,b){return (b.c>0)-(a.c>0)||a.m-b.m||b.c-a.c;});
+if(ord==="acessos")l.sort(function(a,b){return b.v-a.v||b.c-a.c;});
 if(ord==="nome")l.sort(function(a,b){return a.t.localeCompare(b.t,"pt-BR");});
-corpo.innerHTML=l.map(function(r){var has=r.c>0;return '<tr><td><a href="artigo-'+esc(r.slug)+'.html">'+esc(r.t)+'</a></td><td class="n">'+(has?'<span class="bar"><i style="width:'+(r.m/5*100).toFixed(0)+'%"></i></span>★ '+fmt(r.m):'<span class="dim">–</span>')+'</td><td class="n">'+(has?r.c:'<span class="dim">0</span>')+'</td></tr>';}).join("");}
+corpo.innerHTML=l.map(function(r){var has=r.c>0;return '<tr><td><a href="artigo-'+esc(r.slug)+'.html">'+esc(r.t)+'</a></td><td class="n">'+(has?'<span class="bar"><i style="width:'+(r.m/5*100).toFixed(0)+'%"></i></span>★ '+fmt(r.m):'<span class="dim">–</span>')+'</td><td class="n">'+(has?r.c:'<span class="dim">0</span>')+'</td><td class="n">'+(r.v>0?r.v.toLocaleString("pt-BR"):'<span class="dim">0</span>')+'</td></tr>';}).join("");}
+var vbase=base.replace("/ratings","/views");
+function carregaViews(){vmap={};return fetch(vbase+"?pageSize=300&key="+K).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(d){(d.documents||[]).forEach(function(x){if(x.fields&&x.fields.count)vmap[slugOf(x)]=+x.fields.count.integerValue;});})
+.catch(function(){return Promise.all(ARTS.map(function(a){return fetch(vbase+"/"+a[0]+"?key="+K).then(function(r){return r.ok?r.json():null;}).then(function(d){if(d&&d.fields&&d.fields.count)vmap[a[0]]=+d.fields.count.integerValue;}).catch(function(){});}));});}
 function carrega(){st.textContent="Carregando…";var map={};
 fetch(base+"?pageSize=300&key="+K).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(d){(d.documents||[]).forEach(function(x){var p=pick(x);if(p)map[slugOf(x)]=p;});return map;})
 .catch(function(){return Promise.all(ARTS.map(function(a){return fetch(base+"/"+a[0]+"?key="+K).then(function(r){return r.ok?r.json():null;}).then(function(d){var p=pick(d);if(p)map[a[0]]=p;}).catch(function(){});})).then(function(){return map;});})
+.then(function(m){return carregaViews().then(function(){return m;});})
 .then(function(m){monta(m);desenha();var n=new Date();st.textContent="Atualizado às "+n.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});})
 .catch(function(){st.textContent="Não foi possível carregar os dados.";});}
 [].forEach.call(document.querySelectorAll("[data-o]"),function(b){b.onclick=function(){ord=b.getAttribute("data-o");[].forEach.call(document.querySelectorAll("[data-o]"),function(x){x.setAttribute("aria-pressed",String(x===b));});desenha();};});
-document.getElementById("atualizar").onclick=carrega;carrega();
+document.getElementById("atualizar").onclick=carrega;try{localStorage.setItem("semcontagem","1");}catch(e){}
+carrega();
 })();
 </script></body></html>

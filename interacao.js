@@ -11,6 +11,18 @@
   var g = CONFIG.giscus, f = CONFIG.firebase;
   var hasC = g.repoId && g.categoryId, hasR = f.projectId && f.apiKey;
   if (!hasC && !hasR) return;
+  /* ---- contagem de acessos: 1 por artigo a cada sessão; navegador marcado em avaliacoes.html não conta ---- */
+  if (hasR && slug) {
+    try {
+      if (!localStorage.getItem("semcontagem") && !sessionStorage.getItem("v:" + slug)) {
+        sessionStorage.setItem("v:" + slug, "1");
+        var vb = "https://firestore.googleapis.com/v1/projects/" + f.projectId + "/databases/(default)/documents";
+        fetch(vb + ":commit?key=" + f.apiKey, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ writes: [{
+          update: { name: "projects/" + f.projectId + "/databases/(default)/documents/views/" + slug, fields: {} }, updateMask: { fieldPaths: [] },
+          updateTransforms: [{ fieldPath: "count", increment: { integerValue: "1" } }] }] }) }).catch(function () {});
+      }
+    } catch (e) {}
+  }
   box.hidden = false;
   function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
 
