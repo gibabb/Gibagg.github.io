@@ -255,3 +255,18 @@ footer a:hover{color:var(--gold)}
 .zoom-close{position:absolute;top:10px;right:14px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(15,39,71,.9);color:#fff;font-size:28px;line-height:1;cursor:pointer}
 .zoom-close:hover{background:#d4a63a;color:#0f2747}
 @media (prefers-reduced-motion:reduce){.zoom-btn{transition:none}}
+
+/* interação: avaliação e comentários */
+.engage{max-width:708px;margin:0 auto;padding:8px 24px 56px}
+.engage .rate{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;box-shadow:var(--shadow);margin-bottom:28px}
+.engage h2{font:600 24px/1.25 var(--font-display);margin:0 0 6px;color:var(--ink)}
+.engage .sub{margin:0 0 14px;color:var(--muted);font-size:16px}
+.stars{display:flex;gap:6px}
+.stars button{background:none;border:0;padding:2px;cursor:pointer;font-size:38px;line-height:1;color:var(--line);transition:transform .12s,color .12s}
+.stars button.on{color:var(--gold)}
+.stars button:hover{transform:scale(1.12)}
+.stars button:focus-visible{outline:3px solid var(--sky);outline-offset:2px;border-radius:8px}
+.stars.done button{cursor:default}.stars.done button:hover{transform:none}
+.rate .avg{margin:12px 0 0;color:var(--muted);font:600 14px var(--font-mono);letter-spacing:.03em}
+.rate .thanks{margin:12px 0 0;color:var(--gold-ink);font-weight:600}
+.engage .cm-head{margin-bottom:10px}
