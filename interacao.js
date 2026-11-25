@@ -3,7 +3,7 @@
 (function () {
   var CONFIG = {
     giscus: { repo: "gibabb/gibagg.github.io", repoId: "R_kgDOV1s3YA", category: "Announcements", categoryId: "DIC_kwDOV1s3YM4DL5mX" },
-    firebase: { projectId: "", apiKey: "" }
+    firebase: { projectId: "gibagg-d8ab9", apiKey: "AIzaSyDz6T4Ysmj_ao1vxhuxmrBsXi-gBgIWklQ" }
   };
   var box = document.getElementById("interacao");
   if (!box) return;
