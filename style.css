@@ -300,3 +300,15 @@ footer a:hover{color:var(--gold)}
 @media(max-width:600px){.resumo dl{grid-template-columns:1fr}}
 .resumo ol,.resumo dd{font-family:var(--font-body);font-size:16px}.resumo ol li{margin:0 0 6px}
 .prose .resumo ol,.prose .resumo li{font-family:var(--font-body);font-size:16px;line-height:1.55}
+
+/*recs*/
+.recs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.recs-top{margin-bottom:34px}
+.recs-group{margin-top:30px}
+.recs-group h3{font:600 22px/1.2 var(--font-display);margin:0 0 4px}
+.recs-sub{margin:0 0 14px;color:var(--muted);font-size:15px}
+.rec{margin:0;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:14px}
+.rec blockquote{margin:0;font-size:16px;line-height:1.6}
+.rec figcaption{margin-top:auto;display:flex;flex-direction:column;gap:2px;font-size:14px}
+.rec figcaption span{color:var(--muted)}
+.rec figcaption em{font-style:normal;font:500 12px/1.4 var(--font-mono);letter-spacing:.03em;color:var(--muted)}
