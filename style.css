@@ -285,3 +285,17 @@ footer a:hover{color:var(--gold)}
 .busca-res a:hover,.busca-res a.on{background:var(--chip,#eef)}
 .busca-n,.busca-vazio{margin:6px 12px;color:var(--muted,#667);font:500 12.5px/1.4 var(--font-body)}
 @media (max-width:860px){.busca{flex:1 1 100%;max-width:none;order:2}.nav{order:3}}
+
+/*leitura-gestor*/
+.resumo{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin:22px 0;box-shadow:var(--shadow)}
+.resumo .kicker{margin:0 0 10px}
+.resumo dl{display:grid;grid-template-columns:150px 1fr;gap:8px 16px;margin:0}
+.resumo dt{font-weight:700;color:var(--navy)}
+.resumo dd{margin:0}
+.resumo ol{margin:0;padding-left:20px}
+.citar{background:var(--chip);border:1px dashed var(--line);border-radius:12px;padding:14px 18px;margin:24px 0;font-size:15px}
+.citar .kicker{margin:0 0 6px}
+.citar p{margin:0}
+.citar button{margin-top:10px;cursor:pointer;border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:6px 12px;font:inherit;font-size:14px}
+@media(max-width:600px){.resumo dl{grid-template-columns:1fr}}
+.resumo ol,.resumo dd{font-family:var(--font-body);font-size:16px}.resumo ol li{margin:0 0 6px}
