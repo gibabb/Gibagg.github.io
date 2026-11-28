@@ -317,3 +317,11 @@ footer a:hover{color:var(--gold)}
 .card .nota{margin-left:auto;padding-left:12px;font:600 12.5px/1 var(--font-mono);letter-spacing:.02em;color:var(--navy,#0d2a4a);white-space:nowrap}
 .card .nota b{color:var(--gold,#d4a53a);font-size:14px}
 .card .nota small{font-weight:500;color:var(--muted)}
+
+/*code*/
+.prose pre.code{margin:1.1em 0 .4em;padding:16px 18px;background:#0e1b30;color:#e8eef8;border:1px solid #223653;border-left:4px solid var(--gold);border-radius:10px;overflow-x:auto;white-space:pre;word-break:normal;font:500 14.5px/1.6 var(--font-mono),ui-monospace,Consolas,monospace;tab-size:4}
+.prose pre.code code{background:none;border:0;padding:0;font:inherit;color:inherit}
+.prose pre.code.out{margin:0 0 1.2em;background:#16253d;border-left-color:#5a8fd6;color:#cfe0f7;border-top-left-radius:0;border-top-right-radius:0;position:relative}
+.prose pre.code.out::before{content:"Saída";position:absolute;top:-1px;right:12px;transform:translateY(-100%);font:600 11px/1 var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:#8fb0dc;background:#16253d;padding:4px 9px;border-radius:6px 6px 0 0}
+.prose code:not(pre code){background:var(--chip);border:1px solid var(--line);border-radius:6px;padding:1px 6px;font:500 .9em var(--font-mono),ui-monospace,Consolas,monospace}
+.prose h3{margin:1.5em 0 .3em}
